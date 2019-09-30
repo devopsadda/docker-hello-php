@@ -32,3 +32,30 @@ COPY src/ /var/www/html/
 
 EXPOSE 80
 ```
+## Step03: Build Docker Image
+```bash
+$ docker build -t tanvir0102/php-hello-world .
+```
+## Step04: Run Docker container and Test your application
+```bash
+$ docker image ls
+$ docker run -d -p 80:80 --name hello-php-app tanvir0102/php-hello-world
+$ curl http://localhost:80
+```
+## Push the image to Docker Hub Registry
+```bash
+$ docker login
+$ docker push tanvir0102/php-hello-world
+```
+## Do cleanup and pull your image from dockerhub and run as container
+```bash
+$ docker container ls
+$ docker container stop hello-php-app
+$ docker container rm hello-php-app
+$ docker image ls
+$ docker image rm tanvir0102/php-hello-world
+$ docker run -d -p 80:80 --name hello-php-app tanvir0102/php-hello-world
+$ curl http://localhost:80
+$ docker image ls
+$ docker container ls
+```
