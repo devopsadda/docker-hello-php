@@ -36,18 +36,18 @@ EXPOSE 80
 ```bash
 $ docker build -t tanvir0102/php-hello-world .
 ```
-## Step04: Run Docker container and Test your application
+## Step04: Run as Docker container and Test your application
 ```bash
 $ docker image ls
 $ docker run -d -p 80:80 --name hello-php-app tanvir0102/php-hello-world
 $ curl http://localhost:80
 ```
-## Push the image to Docker Hub Registry
+## Step05: Push the image to Docker Hub Registry
 ```bash
 $ docker login
 $ docker push tanvir0102/php-hello-world
 ```
-## Do cleanup and pull your image from dockerhub and run as container
+## Step06: Do cleanup and pull your image from dockerhub and run as container
 ```bash
 $ docker container ls
 $ docker container stop hello-php-app
