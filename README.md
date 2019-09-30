@@ -1,2 +1,4 @@
 # docker-hello-php
-Simple PHP application build as a Docker Image
+Build a docker image using a simple PHP Hello-World Application
+
+
